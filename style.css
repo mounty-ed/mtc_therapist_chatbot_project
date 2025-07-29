@@ -1,0 +1,130 @@
+:root {
+    --bg: hsl(0, 0%, 5%);
+    --bg-dark: hsl(0, 0%, 0%);
+    --bg-light: hsl(0, 0%, 10%);
+    --text: hsl(0, 0%, 90%);
+    --text-muted: hsl(0, 0%, 50%);
+    --border: hsl(0, 0%, 20%);
+    --gradient: linear-gradient(0deg, var(--bg), var(--bg-light));
+    --highlight: hsl(0, 0%, 35%);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--bg-dark);
+    color: var(--text);
+}
+
+#messages-wrapper {
+    background: var(--bg);
+    height: 680px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    border-top: 1px solid var(--highlight);
+    overflow: hidden; /* This clips the scrollbar */
+    margin-bottom: 10px;
+}
+
+#messages {
+    height: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dark scrollbar styling for WebKit browsers */
+#messages::-webkit-scrollbar {
+    width: 12px;
+}
+
+#messages::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+#messages::-webkit-scrollbar-thumb {
+    background: var(--bg-light);
+    border-radius: 6px;
+    border: 2px solid var(--bg);
+}
+
+#messages::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 0%, 25%);
+}
+
+/* Dark scrollbar for Firefox */
+#messages {
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg-light) var(--bg);
+}
+
+.message {
+    margin: 10px 0;
+    padding: 14px;
+    border-radius: 15px;
+}
+
+.user {
+    border: 1px solid var(--border);
+    border-top: 1px solid var(--highlight);
+    background: var(--gradient);
+    margin-left: 40px;
+    align-self: flex-end;
+    line-height: 1.6;
+}
+
+.therapist {
+    background: transparent;
+    line-height: 1.6;
+}
+
+.error {
+    color: #c62828;
+}
+
+#input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-bottom-left-radius: 99px;
+    border-top-left-radius: 99px;
+    font-size: 1rem;
+    color: var(--text);
+    background: var(--gradient);
+
+}
+
+#send {
+    padding: 10px 20px;
+    border: none;
+    border-bottom-right-radius: 99px;
+    border-top-right-radius: 99px;
+    font-size: 1rem;
+    color: var(--text);
+    background: var(--gradient);
+    border-left: 1px solid var(--border);
+}
+
+#text-box {
+    margin-top: 40px;
+    display: flex;
+    border: 1px solid var(--border);
+    border-top: 1px solid var(--highlight);
+    border-radius: 99px;
+}
+
+.typing {
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+#footnote {
+    margin-top: 20px;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    text-align: center;
+}
