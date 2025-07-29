@@ -38,7 +38,10 @@ Whether you’re an outreach worker, a volunteer at a drop-in center, or a neigh
 
 ### 1. Clone & Prepare
 
-Download the files and enter mtc_therapist_chatbot_project in the terminal.
+```bash
+git clone https://github.com/mounty-ed/mtc_therapist_chatbot_project
+cd mtc_therapist_chatbot_project
+```
 
 ### 2. Python Environment
 
